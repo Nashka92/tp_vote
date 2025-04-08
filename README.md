@@ -22,6 +22,8 @@ L'application "vote" est une architecture composée de plusieurs microservices c
 1. **Créer un cluster Kubernetes (local ou distant)**  
    - Option : Minikube, Kind, K3s, MicroK8s ou un cluster cloud (GKE, AKS, EKS)
 
+   - kind create cluster --name tp-vote --config kind-config.yaml
+
 2. **Définir les manifests YAML nécessaires**
    - 1 Deployment par service : `vote`, `result`, `worker`, `redis`, `postgres`
    - 1 Service par composant, dont certains en `ClusterIP`, d'autres en `NodePort` ou `LoadBalancer`
@@ -33,6 +35,8 @@ L'application "vote" est une architecture composée de plusieurs microservices c
 
 4. **Déployer tous les composants dans un namespace dédié**  
    Exemple : `vote-app`
+
+   - kubectl apply -f namespace.yml
 
 
 5. **Tester l’application**
