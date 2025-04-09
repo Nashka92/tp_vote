@@ -39,6 +39,17 @@ L'application "vote" est une architecture composée de plusieurs microservices c
    - kubectl apply -f namespace.yml
 
 
+   Créer une image et les pusher dans le docker hub pour chaque microservice
+
+   1 - Créer l'image
+   docker build -t annaraa/result-m2i .
+
+   2 - Pusher l'image
+   docker push annaraa/result-m2i:latest
+
+   3 - Récupérer les images et les mettres dans Deployment
+
+
 5. **Tester l’application**
    - Accéder à l’interface de vote
    - Voter plusieurs fois
