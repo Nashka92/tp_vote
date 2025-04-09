@@ -15,4 +15,4 @@ spec:
     spec:
       containers:
         - name: worker
-          image: <Image>
+          image: annaraa/worker-m2i:latest

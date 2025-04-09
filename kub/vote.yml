@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: vote
-          image: <Image>
+          image: annaraa/vote-m2i:latest
           ports:
             - containerPort: 80
 ---
